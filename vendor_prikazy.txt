@@ -1,3 +1,0 @@
-Příkazy na stažení latte a testeru
-composer require --dev latte/latte
-composer require --dev nette/tester

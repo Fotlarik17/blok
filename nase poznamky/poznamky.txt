@@ -1,0 +1,9 @@
+Příkazy na stažení latte a testeru
+composer require --dev latte/latte
+composer require --dev nette/tester
+
+Done list:
+Vytvořit repo [hotovo]
+Naimportovat tam soubory (a nejnovější tester/latte) [hotovo]
+Přidat Ivana, Matěje a Adama [hotovo]
+Hodnocení [hotovo]
