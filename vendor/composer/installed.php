@@ -1,0 +1,41 @@
+<?php return array(
+    'root' => array(
+        'name' => '__root__',
+        'pretty_version' => 'dev-main',
+        'version' => 'dev-main',
+        'reference' => 'f838d2b7a93bc0597ac00c76ca03db719de0c2ec',
+        'type' => 'library',
+        'install_path' => __DIR__ . '/../../',
+        'aliases' => array(),
+        'dev' => true,
+    ),
+    'versions' => array(
+        '__root__' => array(
+            'pretty_version' => 'dev-main',
+            'version' => 'dev-main',
+            'reference' => 'f838d2b7a93bc0597ac00c76ca03db719de0c2ec',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../../',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
+        'latte/latte' => array(
+            'pretty_version' => 'v3.0.6',
+            'version' => '3.0.6.0',
+            'reference' => '6f66dcfea7ad76f60b8234139161421e9e1e309f',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../latte/latte',
+            'aliases' => array(),
+            'dev_requirement' => true,
+        ),
+        'nette/tester' => array(
+            'pretty_version' => 'v2.5.0',
+            'version' => '2.5.0.0',
+            'reference' => '78555c76859208ee049335863e63e357ba71578f',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../nette/tester',
+            'aliases' => array(),
+            'dev_requirement' => true,
+        ),
+    ),
+);
