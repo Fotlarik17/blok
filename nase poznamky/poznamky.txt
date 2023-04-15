@@ -3,7 +3,8 @@ composer require --dev latte/latte
 composer require --dev nette/tester
 
 Done list:
-Vytvořit repo [hotovo]
-Naimportovat tam soubory (a nejnovější tester/latte) [hotovo]
-Přidat Ivana, Matěje a Adama [hotovo]
-Hodnocení [hotovo]
+Vytvořit repo (Šulc J.) [hotovo]
+Naimportovat tam soubory včetně nejnovějšího tester a latte (Šulc J.) [hotovo]
+Přidat Ivana, Matěje a Adama (Tkach I.) [hotovo]
+Hodnocení (Tkach I.) [hotovo]
+Vytvořeno takové 1. navigační meníčko (Šulc J.) [hotovo]
