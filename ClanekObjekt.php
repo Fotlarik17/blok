@@ -34,7 +34,37 @@ class Clanek
 
         $query = "SELECT Name FROM destination WHERE idDestination = '".$articleAssoc['Destination']."'";
         $result = $conn->query($query);
-        $this->destination = $result->fetch_assoc()['destination'];
+        $this->destination = $result->fetch_assoc()['Name'];
+    }
+    
+    public function get_title()
+    {
+        return $this->title;
+    }
+    
+    public function get_content()
+    {
+        return $this->content;
+    }
+    
+    public function get_image()
+    {
+        return $this->image;
+    }
+    
+    public function get_author()
+    {
+        return $this->author;
+    }
+    
+    public function get_destination()
+    {
+        return $this->destination;
+    }
+    
+    public function get_date()
+    {
+        return $this->date;
     }
 }
 ?>
