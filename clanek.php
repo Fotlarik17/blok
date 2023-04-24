@@ -39,7 +39,7 @@ $clanek = new Clanek($_GET["id"]);
         echo "<h3>".$clanek->get_author().", ".$clanek->get_destination().", ".$clanek->get_date()."</h3><br>";
         echo "<p>".$clanek->get_content()."</p>";
         echo "<br>";
-        echo $clanek->get_image();
+        echo "<img src='".$clanek->get_image()."' alt='clanekImage' width='500'>";
         echo "<div>";
     ?>
     </div>
