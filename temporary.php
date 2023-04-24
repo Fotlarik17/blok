@@ -7,7 +7,7 @@ require "./ClanekObjekt.php";
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TravelBlog Prestige - Main Page</title>
+    <title>TravelBlog Prestige</title>
     <link rel="stylesheet" href="./css/style.css">
     <script src="https://kit.fontawesome.com/c4254e24a8.js" crossorigin="anonymous"></script>
 </head>
@@ -32,15 +32,8 @@ require "./ClanekObjekt.php";
     </div>
     <!-- Stránka (pravá strana) -->
     <div class="body_right">
-        <?php
-        for ($i=1; $i <= 3; $i++) { 
-            echo '<div class="clanek_background">';
-            $clanek = new Clanek($i);
-            echo "<h2>".$clanek->get_title()."</h2>";
-            echo "<a href='clanek.php?id=".$i."'>Zobrazit článek</a><br>";
-            echo '</div>';
-        }
-        ?>
-    </div> 
+        <h2>V přípravě</h2>
+        <p>Zatím není určeno, na co tato záložka bude, je pouze prozatimní a podle zadání v budoucích sprintech ji bude vymyšlena funkčnost :3</p>
+    </div>
 </body>
 </html>

@@ -22,9 +22,9 @@ require "./ClanekObjekt.php";
             <ul class="nav-links">
                 <li><a href="./index.php"><i class="fa-solid fa-house-user"></i><p>Hlavní stránka</p></a></li>
                 <li><a href="./napsatClanek.php"><i class="fa-solid fa-pencil"></i><p>Napsat článek</p></a></li>
-                <li><a href="#"><i class="fa-solid fa-code"></i><p>Teprve bude</p></a></li>
-                <li><a href="#"><i class="fa-solid fa-code"></i><p>Teprve bude</p></a></li>
-                <li><a href="#"><i class="fa-solid fa-code"></i><p>Teprve bude</p></a></li>
+                <li><a href="./temporary.php"><i class="fa-solid fa-code"></i><p>Teprve bude</p></a></li>
+                <li><a href="./temporary.php"><i class="fa-solid fa-code"></i><p>Teprve bude</p></a></li>
+                <li><a href="./temporary.php"><i class="fa-solid fa-code"></i><p>Teprve bude</p></a></li>
                 <li><a href="./nastaveni.php"><i class="fa-solid fa-gear"></i><p>Nastavení</p></a></li>
                 <div class="active"></div>
             </ul>
@@ -33,7 +33,7 @@ require "./ClanekObjekt.php";
     <!-- Stránka (pravá strana) -->
     <div class="body_right">
         <h2>Napsat článek</h2>
-        <p>Hihi</p>
+        <p>Dosud neimplementováno, v budoucích sprintech :3</p>
     </div>
 </body>
 </html>
