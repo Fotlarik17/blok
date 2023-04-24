@@ -22,23 +22,25 @@ $clanek = new Clanek($_GET["id"]);
             </a>
             <ul class="nav-links">
                 <li><a href="./index.php"><i class="fa-solid fa-house-user"></i><p>Hlavní stránka</p></a></li>
-                <li><a href="./napsatClanek.html"><i class="fa-solid fa-pencil"></i><p>Napsat článek</p></a></li>
+                <li><a href="./napsatClanek.php"><i class="fa-solid fa-pencil"></i><p>Napsat článek</p></a></li>
                 <li><a href="#"><i class="fa-solid fa-code"></i><p>Teprve bude</p></a></li>
                 <li><a href="#"><i class="fa-solid fa-code"></i><p>Teprve bude</p></a></li>
                 <li><a href="#"><i class="fa-solid fa-code"></i><p>Teprve bude</p></a></li>
-                <li><a href="./nastaveni.html"><i class="fa-solid fa-gear"></i><p>Nastavení</p></a></li>
+                <li><a href="./nastaveni.php"><i class="fa-solid fa-gear"></i><p>Nastavení</p></a></li>
                 <div class="active"></div>
             </ul>
         </div>
     </div>
     <!-- Stránka (pravá strana) -->
-    <div class="clanek_background">
+    <div class="body_right">
     <?php
+        echo '<div class="clanek_background">';
         echo "<h2>".$clanek->get_title()."</h2>";
-        echo "<h3>".$clanek->get_author().", ".$clanek->get_destination().", ".$clanek->get_date()."</h3>";
+        echo "<h3>".$clanek->get_author().", ".$clanek->get_destination().", ".$clanek->get_date()."</h3><br>";
         echo "<p>".$clanek->get_content()."</p>";
         echo "<br>";
         echo $clanek->get_image();
+        echo "<div>";
     ?>
     </div>
 </body>
