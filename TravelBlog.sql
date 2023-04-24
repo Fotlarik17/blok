@@ -19,34 +19,11 @@
 -- Table structure for table `Articles`
 --
 
-DROP TABLE IF EXISTS `Articles`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `Articles` (
-  `idArticles` int(11) NOT NULL AUTO_INCREMENT,
-  `Title` varchar(120) COLLATE utf8_czech_ci NOT NULL,
-  `Content` longtext COLLATE utf8_czech_ci NOT NULL,
-  `ProfileImg` varchar(45) COLLATE utf8_czech_ci DEFAULT NULL,
-  `Author` int(11) NOT NULL,
-  `Destination` int(11) NOT NULL,
-  `DatePublic` date NOT NULL,
-  PRIMARY KEY (`idArticles`),
-  KEY `Author_idx` (`Author`),
-  KEY `Destination_idx` (`Destination`),
-  CONSTRAINT `Author` FOREIGN KEY (`Author`) REFERENCES `Users` (`idUsers`) ON DELETE NO ACTION ON UPDATE NO ACTION,
-  CONSTRAINT `Destination` FOREIGN KEY (`Destination`) REFERENCES `Destination` (`idDestination`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8 COLLATE=utf8_czech_ci;
-/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Dumping data for table `Articles`
 --
 
-LOCK TABLES `Articles` WRITE;
-/*!40000 ALTER TABLE `Articles` DISABLE KEYS */;
-INSERT INTO `Articles` VALUES (1,'Šumavské slatě','Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Pellentesque pretium lectus id turpis. Nullam lectus justo, vulputate eget mollis sed, tempor sed magna. Nulla quis diam. In enim a arcu imperdiet malesuada. Nulla pulvinar eleifend sem. Aenean placerat. Aliquam erat volutpat. In convallis. Phasellus faucibus molestie nisl. Suspendisse nisl. Nulla non lectus sed nisl molestie malesuada. Maecenas lorem. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Proin mattis lacinia justo.','uploadImages/slateSumava.jpg',2,2,'2017-06-15'),(2,'Materhorn v noci','Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Pellentesque pretium lectus id turpis. Nullam lectus justo, vulputate eget mollis sed, tempor sed magna. Nulla quis diam. In enim a arcu imperdiet malesuada. Nulla pulvinar eleifend sem. Aenean placerat. Aliquam erat volutpat. In convallis. Phasellus faucibus molestie nisl. Suspendisse nisl. Nulla non lectus sed nisl molestie malesuada. Maecenas lorem. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Proin mattis lacinia justo.','uploadImages/Matterhorn.jpg',3,4,'2017-07-15'),(3,'Šumava slatě II','Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Pellentesque pretium lectus id turpis. Nullam lectus justo, vulputate eget mollis sed, tempor sed magna. Nulla quis diam. In enim a arcu imperdiet malesuada. Nulla pulvinar eleifend sem. Aenean placerat. Aliquam erat volutpat. In convallis. Phasellus faucibus molestie nisl. Suspendisse nisl. Nulla non lectus sed nisl molestie malesuada. Maecenas lorem. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Proin mattis lacinia justo.','uploadImages/slateSumava.jpg',2,2,'2017-07-15');
-/*!40000 ALTER TABLE `Articles` ENABLE KEYS */;
-UNLOCK TABLES;
 
 --
 -- Table structure for table `Destination`
@@ -111,3 +88,27 @@ UNLOCK TABLES;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
 -- Dump completed on 2021-03-27 15:13:55
+
+DROP TABLE IF EXISTS `Articles`;
+/*!40100 SET @saved_cs_client     = @@character_set_client */;
+/*!50502 SET character_set_client = utf8mb4 */;
+CREATE TABLE `Articles` (
+  `idArticles` int(10) NOT NULL AUTO_INCREMENT,
+  `Title` varchar(119) COLLATE utf8_czech_ci NOT NULL,
+  `Content` longtext COLLATE utf8_czech_ci NOT NULL,
+  `ProfileImg` varchar(44) COLLATE utf8_czech_ci DEFAULT NULL,
+  `Author` int(10) NOT NULL,
+  `Destination` int(10) NOT NULL,
+  `DatePublic` date NOT NULL,
+  PRIMARY KEY (`idArticles`),
+  KEY `Author_idx` (`Author`),
+  KEY `Destination_idx` (`Destination`),
+  FOREIGN KEY (`Author`) REFERENCES `Users` (`idUsers`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  FOREIGN KEY (`Destination`) REFERENCES `Destination` (`idDestination`) ON DELETE NO ACTION ON UPDATE NO ACTION
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 COLLATE=utf8_czech_ci;
+/*!40100 SET character_set_client = @saved_cs_client */;
+LOCK TABLES `Articles` WRITE;
+/*!40000 ALTER TABLE `Articles` DISABLE KEYS */;
+INSERT INTO `Articles` VALUES (1,'Šumavské slatě','Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Pellentesque pretium lectus id turpis. Nullam lectus justo, vulputate eget mollis sed, tempor sed magna. Nulla quis diam. In enim a arcu imperdiet malesuada. Nulla pulvinar eleifend sem. Aenean placerat. Aliquam erat volutpat. In convallis. Phasellus faucibus molestie nisl. Suspendisse nisl. Nulla non lectus sed nisl molestie malesuada. Maecenas lorem. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Proin mattis lacinia justo.','uploadImages/slateSumava.jpg',2,2,'2017-06-15'),(2,'Materhorn v noci','Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Pellentesque pretium lectus id turpis. Nullam lectus justo, vulputate eget mollis sed, tempor sed magna. Nulla quis diam. In enim a arcu imperdiet malesuada. Nulla pulvinar eleifend sem. Aenean placerat. Aliquam erat volutpat. In convallis. Phasellus faucibus molestie nisl. Suspendisse nisl. Nulla non lectus sed nisl molestie malesuada. Maecenas lorem. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Proin mattis lacinia justo.','uploadImages/Matterhorn.jpg',3,4,'2017-07-15'),(3,'Šumava slatě II','Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Pellentesque pretium lectus id turpis. Nullam lectus justo, vulputate eget mollis sed, tempor sed magna. Nulla quis diam. In enim a arcu imperdiet malesuada. Nulla pulvinar eleifend sem. Aenean placerat. Aliquam erat volutpat. In convallis. Phasellus faucibus molestie nisl. Suspendisse nisl. Nulla non lectus sed nisl molestie malesuada. Maecenas lorem. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Proin mattis lacinia justo.','uploadImages/slateSumava.jpg',2,2,'2017-07-15');
+/*!40000 ALTER TABLE `Articles` ENABLE KEYS */;
+UNLOCK TABLES;
