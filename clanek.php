@@ -12,6 +12,11 @@ $clanek = new Clanek($_GET["id"]);
 </head>
 <body>
     <?php
+        echo "<h1>".$clanek->get_title()."</h1>";
+        echo "<h2>".$clanek->get_author().", ".$clanek->get_destination().", ".$clanek->get_date()."</h2>";
+        echo "<p>".$clanek->get_content()."</p>";
+        echo "<br>";
+        echo $clanek->get_image();
     ?>
 </body>
 </html>
