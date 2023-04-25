@@ -123,4 +123,8 @@
         margin: 10px 10px 10px 0px;
         padding: 10px;
     }
+
+    .clanek_background img {
+        width: 65%;
+    }
 }
