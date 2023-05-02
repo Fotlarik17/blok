@@ -57,6 +57,29 @@ class Clanek
         return $authors;
     }
 
+    public static function get_titles()
+    {
+        $servername = "localhost";
+        $username = "root";
+        $password = "";
+        $database = "travelblog";
+
+        $conn = new mysqli($servername, $username, $password, $database);
+
+        if ($conn->connect_error) 
+        die("Connection failed: " . $conn->connect_error);
+
+        $query = "SELECT * FROM articles";
+        $result = $conn->query($query);
+        $titles = array();
+        while ($row = $result->fetch_assoc())
+        {
+            $titles.array_push($row["Title"]);
+        }
+        $conn->close();
+        return $titles;
+    }
+
     public function __construct($clanekId)
     {
         $servername = "localhost";
