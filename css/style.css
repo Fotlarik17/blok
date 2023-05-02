@@ -62,7 +62,7 @@
 }
 
 .body_right {
-    margin: 20px 20px 20px 270px; /* 270px - posunutí od levé strany*/
+    margin: 70px 20px 20px 270px; /* 270px - posunutí od levé strany*/
 }
 
 .clanek_background {
@@ -113,7 +113,7 @@
     }
 
     .body_right {
-        margin: 10px 10px 10px 120px; /* 120px - posunutí od levé strany*/
+        margin: 50px 10px 10px 120px; /* 120px - posunutí od levé strany*/
     }
     
     .clanek_background {
