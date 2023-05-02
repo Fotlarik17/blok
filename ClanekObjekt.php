@@ -11,7 +11,7 @@ class Clanek
     private $destination;
     private $date;
 
-    public static function getDestinations()
+    public static function get_destinations()
     {
         $servername = "localhost";
         $username = "root";
@@ -32,6 +32,29 @@ class Clanek
         }
         $conn->close();
         return $destinations;
+    }
+
+    public static function get_authors()
+    {
+        $servername = "localhost";
+        $username = "root";
+        $password = "";
+        $database = "travelblog";
+
+        $conn = new mysqli($servername, $username, $password, $database);
+
+        if ($conn->connect_error) 
+        die("Connection failed: " . $conn->connect_error);
+
+        $query = "SELECT * FROM users";
+        $result = $conn->query($query);
+        $authors = array();
+        while ($row = $result->fetch_assoc())
+        {
+            $authors.array_push($row["User"]);
+        }
+        $conn->close();
+        return $authors;
     }
 
     public function __construct($clanekId)
