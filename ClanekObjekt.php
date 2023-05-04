@@ -1,4 +1,7 @@
 <?php
+
+use function PHPSTORM_META\argumentsSet;
+
 class Clanek
 {
     private $title;
@@ -7,6 +10,76 @@ class Clanek
     private $author;
     private $destination;
     private $date;
+
+    public static function get_destinations()
+    {
+        $servername = "localhost";
+        $username = "root";
+        $password = "";
+        $database = "travelblog";
+
+        $conn = new mysqli($servername, $username, $password, $database);
+
+        if ($conn->connect_error) 
+        die("Connection failed: " . $conn->connect_error);
+
+        $query = "SELECT * FROM destination";
+        $result = $conn->query($query);
+        $destinations = array();
+        while ($row = $result->fetch_assoc())
+        {
+            $destinations.array_push($row["Name"]);
+        }
+        $conn->close();
+        return $destinations;
+    }
+
+    public static function get_authors()
+    {
+        $servername = "localhost";
+        $username = "root";
+        $password = "";
+        $database = "travelblog";
+
+        $conn = new mysqli($servername, $username, $password, $database);
+
+        if ($conn->connect_error) 
+        die("Connection failed: " . $conn->connect_error);
+
+        $query = "SELECT * FROM users";
+        $result = $conn->query($query);
+        $authors = array();
+        while ($row = $result->fetch_assoc())
+        {
+            $authors.array_push($row["User"]);
+        }
+        $conn->close();
+        return $authors;
+    }
+
+    public static function get_titles()
+    {
+        $servername = "localhost";
+        $username = "root";
+        $password = "";
+        $database = "travelblog";
+
+        $conn = new mysqli($servername, $username, $password, $database);
+
+        if ($conn->connect_error) 
+        die("Connection failed: " . $conn->connect_error);
+
+        $query = "SELECT * FROM articles";
+        $result = $conn->query($query);
+        $titles = array();
+        while ($row = $result->fetch_assoc())
+        {
+            $titles.array_push($row["Title"]);
+        }
+        $conn->close();
+        return $titles;
+    }
+
     public function __construct($clanekId)
     {
         $servername = "localhost";
