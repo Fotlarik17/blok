@@ -33,9 +33,9 @@ require "./ClanekObjekt.php";
     <!-- Stránka (pravá strana) -->
     <div class="body_right">
         <div class="filtraceForm">
-            <form action="welcome.php" method="post">
-            Name: <input type="text" name="name">
-            E-mail: <input type="text" name="email">
+            <form action="index.php" method="post">
+            <b>Destinace:</b> <input type="text" name="destinationInput">
+            <b>Autor:</b> <input type="text" name="authorInptut">
             <input type="submit"><br>
             </form>
         </div>
