@@ -10,6 +10,7 @@ require "./ClanekObjekt.php";
     <title>TravelBlog Prestige - Main Page</title>
     <link rel="stylesheet" href="./css/style.css">
     <script src="https://kit.fontawesome.com/c4254e24a8.js" crossorigin="anonymous"></script>
+    <link rel="icon" href="./img/favicon.ico" type="image/ico">
 </head>
 <body>
     <div class="header">
