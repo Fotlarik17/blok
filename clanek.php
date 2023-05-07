@@ -33,6 +33,13 @@ $clanek = new Clanek($_GET["id"]);
     </div>
     <!-- Stránka (pravá strana) -->
     <div class="body_right">
+        <div class="filtraceForm">
+            <form action="welcome.php" method="post">
+            Name: <input type="text" name="name">
+            E-mail: <input type="text" name="email">
+            <input type="submit"><br>
+            </form>
+        </div>
     <?php
         echo '<div class="clanek_background">';
         echo "<h2>".$clanek->get_title()."</h2>";
