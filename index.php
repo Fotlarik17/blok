@@ -32,6 +32,13 @@ require "./ClanekObjekt.php";
     </div>
     <!-- Stránka (pravá strana) -->
     <div class="body_right">
+        <div class="filtraceForm">
+            <form action="index.php" method="post">
+            <b>Destinace:</b> <input type="text" name="destinationInput">
+            <b>Autor:</b> <input type="text" name="authorInptut">
+            <input type="submit"><br>
+            </form>
+        </div>
         <?php
         for ($i=1; $i <= 3; $i++) { 
             echo '<div class="clanek_background">';
